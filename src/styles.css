@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color: #5F264A;
+    --primary-color:#B0A4A4;
+    --light-primary-color: #e4d4d4;
+    --secondary-color: #957777;
+    --color-1:#643A6B;
+    --main-font: 'Raleway', sans-serif;
+
+}
+
+body{
+    font-family: var(--main-font);
+    color: var(--light-primary-color);
+    background-color: var(--background-color);
+}
+
+h1{
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 90vh;
+}
+
+.title-container{
+    margin-bottom: 50px;
+}
+
+.title-bottom{
+    width: 80px;
+    height: 3px;
+    background-color: var(--light-primary-color);
+    margin: 0 auto;
+}
+
+
+.input-todo{
+    font: var(--main-font);
+    width: 300px;
+    padding: 8px;
+    margin-bottom: 40px;
+}
+
+.add-btn{
+    font-family: var(--main-font);
+    color: var(--color-1);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 3px;
+    margin-left: 10px;
+    outline: none;
+    padding: 11px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.add-btn:hover{
+    background-color: var(--secondary-color);
+}
+
+
+.todo-content{
+    width: 40%;
+}
+
+.todo-content ul {
+    width: 100%;
+}
+
+.todo-content ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    line-height: 30px;
+}
+
+.name-todo-container{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.icon{
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon:hover{
+    transform: scale(1.09);
+}
+
+.icon:first-child{
+    margin-right: 5px;
+}
+
+.todo-done{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.name-todo-container input {
+    font-family: var(--main-font);
+    padding: 1px;
+}
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 991.98px) { 
+
+    .todo-content{
+        width: 70%;
+    }
+ 
+}
